@@ -1,0 +1,287 @@
+/*Global Properties - ALL HTML*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.8;
+}
+
+/*ALL HTML*/
+/*Header - Navbar*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/*ALL HTML*/
+/*Button - Brightness*/
+
+#brightness {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  color: #b6b6b6;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: none;
+}
+
+#brightness svg {
+  vertical-align: middle;
+}
+
+#brightness:hover svg {
+  stroke: #333;
+  color: #333;
+  transform: scale(1.1);
+  transition: 0.2s ease;
+  transform: rotate(20deg);
+}
+
+/*ALL HTML*/
+/*Content*/
+/*Page Presentations - Not Home*/
+
+.container {
+  width: 80%;
+  min-height: 100vh;
+  max-width: 120rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.pagePresentation {
+  text-align: center;
+  padding: 40px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+}
+
+/*HTML - Home*/
+/*Presentation*/
+
+.presentation {
+  text-align: center;
+  padding: 200px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+}
+
+.mainContent {
+  display: flex;
+  padding: 20px;
+  gap: 25px;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #eee;
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+/*HTML - Home*/
+/*Column - Projects */
+
+.mainContent a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.project {
+  text-decoration: none;
+  color: #333;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+
+/*HTML - Home*/
+/*Column - Experience */
+
+.articleExperience {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+
+/*HTML - Home*/
+/*Content - Reviews*/
+
+.reviews {
+  padding: 30px;
+  border-top: 1px solid #ccc;
+}
+
+.reviewsContent {
+  display: flex;
+  padding: 15px;
+}
+
+.name {
+  color: #ccc;
+}
+
+.review {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.review:hover {
+  background-color: #fff;
+  box-shadow: 0 2px 20px 0 #333;
+  transform: scale(1.05);
+}
+
+/*ALL HTML*/
+/*Content - Do you have any project in mind*/
+
+.contactMe {
+  width: 80%;
+  text-align: center;
+  padding: 50px;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+#contactMeBT {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+#contactMeBT:hover {
+  background-color: #ddd;
+}
+
+#contactMeBT a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+}
+
+/*ALL HTML*/
+/*Footer*/
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background-color: #b6b6b6;
+  border-top: 1px solid #ccc;
+}
+
+/*ALL HTML*/
+/*DarkMode*/
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode nav a,
+body.dark-mode .column a,
+body.dark-mode .presentation,
+body.dark-mode .pagePresentation {
+  color: #f0f0f0;
+}
+
+body.dark-mode .contactMe {
+  background-color: #333;
+}
+
+/*HTML - Home*/
+/*DarkMode*/
+
+body.dark-mode .column,
+body.dark-mode .reviews,
+body.dark-mode .review {
+  background-color: #121212;
+  border-color: #444;
+}
+
+/*ALL HTML*/
+/*HTML - Home*/
+/*Responsive*/
+
+@media (max-width: 768px) {
+  header, /*ALL HTML*/
+  .container, /*ALL HTML*/
+  .mainContent /*HTML - Home*/ {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  nav /*ALL HTML*/ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  nav a /*ALL HTML*/ {
+    text-align: center;
+    display: block;
+    margin: 0;
+  }
+
+  .container, /*ALL HTML*/
+  .mainContent /*HTML - Home*/ {
+    width: 100%;
+  }
+
+  .presentation /*HTML - Home*/ {
+    padding: 4rem;
+  }
+
+  .column /*HTML - Home*/ {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 1.5rem;
+  }
+
+  .reviewsContent /*HTML - Home*/ {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,253 @@
+/*HTML - Examples and Contact*/
+/*Content - Contact and childrens Properties*/
+/*Content - Project Structure Properties*/
+
+.contact, /*HTML - Contact*/
+.projectBase /*HTML - Examples*/ {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  font-family: "Montserrat", sans-serif;
+  align-items: start;
+  min-height: 50vh;
+  margin: 20px;
+}
+
+.sectionForm, /*HTML - Contact*/
+.infoContact, /*HTML - Contact*/
+.projectView /*HTML - Examples*/ {
+  flex: 1 1 300px;
+  padding: 1.5rem;
+}
+
+.projectInfoBox /*HTML - Examples*/ {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+}
+
+.sectionForm, /*HTML - Contact*/
+.projectView /*HTML - Examples*/ {
+  background-color: #fbfbfb;
+  border-radius: 8px;
+}
+
+.infoContact, /*HTML - Contact*/
+.projectInfo /*HTML - Examples*/ {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.projectInfo p, /*HTML - Examples*/
+.projectInfo br /*HTML - Examples*/ {
+  margin-bottom: 1rem;
+}
+
+/*HTML - Contact*/
+/*Content - Form Properties*/
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid #ccc;
+}
+
+textarea {
+  resize: none;
+  min-height: 250px;
+}
+
+/*HTML - Examples and Contact*/
+/*Content - Form Properties - Buttom SendMe Properties*/
+/*Content - Project Structure Details - Buttom visitPage Properties*/
+
+#sendMe, /*HTML - Contact*/
+#visitPage /*HTML - Examples*/ {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: 700;
+}
+
+#visitPage /*HTML - Examples*/ {
+  width: 100%;
+}
+
+#sendMe:hover, /*HTML - Contact*/
+#visitPage:hover /*HTML - Examples*/ {
+  background-color: #ddd;
+}
+
+/*HTML - Contact*/
+/*Content - Info Propieties*/
+
+.info {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.info a,
+.social a {
+  text-decoration: none;
+  color: #333;
+}
+
+.social {
+  text-align: center;
+}
+
+/*HTML - Examples and Contact*/
+/*Content - Info Propieties*/
+
+.socialNetworks, /*HTML - Contact*/
+.technologies /*HTML - Examples*/ {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.socialNetworks li, /*HTML - Contact*/
+.technologies li /*HTML - Examples*/ {
+  margin-bottom: 0.5rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.socialNetworks li:hover, /*HTML - Contact*/
+.technologies li:hover /*HTML - Examples*/ {
+  background-color: #ddd;
+}
+
+/*HTML - Examples*/
+/*Content - ProjectView Properties*/
+
+.projectView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#projectViewBT {
+  height: 500px;
+  color: #b6b6b6;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+
+#projectViewBT svg {
+  width: 100px;
+  height: 100px;
+}
+
+/*HTML - Examples and Contact*/
+/*DarkMode*/
+
+body.dark-mode .sectionForm /*HTML - Contact*/ {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode input, /*HTML - Contact*/
+body.dark-mode textarea /*HTML - Contact*/ {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+body.dark-mode .info a, /*HTML - Contact*/
+body.dark-mode .social a /*HTML - Contact*/ {
+  color: #f0f0f0;
+}
+
+body.dark-mode .socialNetworks li:hover, /*HTML - Contact*/
+body.dark-mode .technologies li:hover /*HTML - Examples*/ {
+  background-color: #333;
+}
+
+body.dark-mode .projectView /*HTML - Examples*/ {
+  background-color: #333;
+}
+
+body.dark-mode #projectViewBT /*HTML - Examples*/ {
+  background-color: #1e1e1e;
+}
+
+/*HTML - Projects and Articles*/
+/*Content - Card Structure Details*/
+
+.cardContent {
+  display: grid;
+  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px;
+  transform: translate(-5px);
+}
+
+.card a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #333;
+}
+
+/*HTML - Projects and Articles*/
+/*DarkMode*/
+
+body.dark-mode .card,
+body.dark-mode .card a {
+  background-color: #121212;
+  border-color: #444;
+  color: #f0f0f0;
+}
+
+/*HTML - Projects and Articles*/
+/*Responsive*/
+
+@media (max-width: 768px) {
+  .cardContent {
+    flex: 1;
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+}
