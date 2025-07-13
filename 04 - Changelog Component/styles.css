@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.8;
+}
+
+/*General Container*/
+
+.container {
+  width: 80%;
+  min-height: 100vh;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+/*Changelog Content*/
+/*brightness button*/
+
+#brightness {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  color: #b6b6b6;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: none;
+}
+
+#brightness svg {
+  vertical-align: middle;
+}
+
+#brightness:hover svg {
+  stroke: #333;
+  color: #333;
+  transform: scale(1.1);
+  transition: 0.2s ease;
+  transform: rotate(20deg);
+}
+
+.changelog {
+  padding: 40px;
+  border-radius: 8px;
+  background-color: #e9e9e9;
+  box-shadow: 0 2px 20px 0 #8f8f8f;
+}
+
+.tasks {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/*Each Task Content*/
+
+.task {
+  display: flex;
+  padding: 5px;
+  margin: 15px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.task:hover {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px 0 #8f8f8f;
+}
+
+.dateTask,
+.description {
+  color: #8f8f8f;
+}
+
+/*Each point with them line */
+
+.dot {
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  margin-top: 4px;
+  border-radius: 100%;
+  background: #8f8f8f;
+  position: relative;
+}
+
+.dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 6rem;
+  background-color: #8f8f8f;
+}
+
+/*Visit Changelog Complete - Button*/
+
+#visitBT {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: 700;
+}
+
+#visitBT:hover {
+  background-color: #ddd;
+}
+
+/*Dark-Mode*/
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .changelog {
+  background-color: #333;
+}
+
+body.dark-mode .task:hover {
+  background-color: #282828;
+}
+
+body.dark-mode #brightness:hover svg {
+  stroke: #fff;
+  color: #fff;
+}
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+  .container /*General*/ {
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  /*Each Task*/
+
+  .task {
+    flex-direction: column;
+    margin-bottom: 60px;
+    align-items: center;
+    text-align: center;
+    gap: 0px;
+    padding: 15px;
+  }
+
+  .task:hover {
+    transform: scale(1.05);
+  }
+
+  /*Each Dot Line*/
+
+  .dot::before {
+    width: 15rem;
+    height: 3px;
+    transform: translate(-50%, -50%);
+  }
+}
